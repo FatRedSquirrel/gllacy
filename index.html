@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gllacy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+
+  <body>
+
+    <div class="nav-mobile-overlay"></div>
+
+    <div class="modal-window-mobile login-window-mobile">
+      <form class="login-form" action="#">
+        <h3 class="login-window-title">Личный кабинет</h3>
+        <input class="field login-form-input" type="email" placeholder="Почта">
+        <input class="field login-form-input" type="password" placeholder="Пароль">
+        <div class="login-form-buttons">
+          <button class="button button-additional login-form-button" type="submit">Войти</button>
+          <div class="login-form-links-container">
+            <a class="login-form-link" href="#">Забыли пароль?</a>
+            <a class="login-form-link" href="#">Регистрация</a>
+          </div>
+        </div>
+        <button class="modal-mobile-close"></button>
+      </form>
+    </div>
+
+    <div class="modal-window-mobile cart-window-mobile">
+      <div class="cart-window">
+        <h3 class="cart-window-title">Корзина</h3>
+        <ul class="cart-list">
+          <li class="cart-item">
+            <img class="cart-item-image" src="images/ice-cream-raspberry.jpg" alt="Изображение товара.">
+            <div class="cart-item-information">
+              <h4 class="cart-item-title ">Малинка</h4>
+              <p class="cart-item-quantity"><span class="ice-cream-weight">1</span>&nbsp;кг х <span
+                  class="price-for-kg">310</span>&nbsp;₽</p>
+            </div>
+            <span class="cart-item-price ">310 ₽</span>
+            <button class="delete-from-cart" type="button"></button>
+          </li>
+          <li class="cart-item">
+            <img class="cart-item-image" src="images/ice-cream-bubble-gum.jpg" alt="Изображение товара.">
+            <div class="cart-item-information">
+              <h4 class="cart-item-title ">Бабл-гам</h4>
+              <p class="cart-item-quantity"><span class="ice-cream-weight">1</span>&nbsp;кг х <span
+                  class="price-for-kg">310</span>&nbsp;₽</p>
+            </div>
+            <span class="cart-item-price ">310 ₽</span>
+            <button class="delete-from-cart" type="button"></button>
+          </li>
+        </ul>
+        <div class="cart-window-bottom">
+          <button class="button button-additional order-button" type="button">Оформить заказ</button>
+          <span class="cart-total">Итого: <span class="cart-total-price">790</span>&nbsp;₽</span>
+        </div>
+        <button class="modal-mobile-close"></button>
+      </div>
+    </div>
+
+
+    <nav class="nav-mobile">
+      <ul class="nav-mobile-list">
+        <li class="nav-mobile-item">
+          <a class="nav-mobile-link mobile-modal-window-open nav-mobile-login" href="#">Вход</a>
+        </li>
+        <li class="nav-mobile-item">
+          <a class="nav-mobile-link mobile-modal-window-open nav-mobile-cart" href="#">Корзина</a>
+        </li>
+        <li class="nav-mobile-item">
+          <a class="nav-mobile-link submenu-open" href="#">Каталог</a>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+            <path
+              d="M96 480c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L242.8 256L73.38 86.63c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l192 192c12.5 12.5 12.5 32.75 0 45.25l-192 192C112.4 476.9 104.2 480 96 480z" />
+          </svg>
+          <ul class="submenu">
+            <li class="nav-mobile-item">
+              <button class="button mobile-menu-back">Назад</button>
+            </li>
+            <li class="nav-mobile-item">
+              <a class="nav-mobile-link" href="#">Сливочное</a>
+            </li>
+            <li class="nav-mobile-item">
+              <a class="nav-mobile-link" href="#">Щербеты</a>
+            </li>
+            <li class="nav-mobile-item">
+              <a class="nav-mobile-link" href="#">Фруктовый лед</a>
+            </li>
+            <li class="nav-mobile-item">
+              <a class="nav-mobile-link" href="#">Мелорин</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-mobile-item">
+          <a class="nav-mobile-link" href="#">Доставка и оплата</a>
+        </li>
+        <li class="nav-mobile-item">
+          <a class="nav-mobile-link" href="#">О компании</a>
+        </li>
+        <li class="nav-mobile-item">
+          <a class="nav-mobile-link" href="#">Для поставщиков</a>
+        </li>
+        <li class="nav-mobile-item">
+          <a class="nav-mobile-link" href="#">Наши документы</a>
+        </li>
+        <li class="nav-mobile-item">
+          <a class="nav-mobile-link" href="#">О производстве</a>
+        </li>
+        <li class="nav-mobile-item">
+          <a class="nav-mobile-link" href="#">Экологические стандарты</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="page-container">
+
+      <!-- HEADER -->
+      <header class="header">
+        <img class="header-logo" src="images/logo.svg" alt="Logo." width="137" height="56">
+        <nav class="header-nav">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#" class="nav-link drop-element-open-button">Каталог</a>
+              <ul class="dropmenu drop-element">
+                <li class="dropmenu-item">
+                  <h3 class="dropmenu-title">Новинки</h3>
+                </li>
+                <li class="dropmenu-item">
+                  <a class="dropmenu-link" href="#">Сливочное</a>
+                </li>
+                <li class="dropmenu-item">
+                  <a class="dropmenu-link" href="#">Щербеты</a>
+                </li>
+                <li class="dropmenu-item">
+                  <a class="dropmenu-link" href="#">Фруктовый лед</a>
+                </li>
+                <li class="dropmenu-item">
+                  <a class="dropmenu-link" href="#">Мелорин</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Доставка и оплата</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">О компании</a>
+            </li>
+          </ul>
+          <ul class="nav-list-additional">
+            <li class="nav-item-additional">
+              <a class="header-phone" href="#">+7 800 555-86-28</a>
+            </li>
+            <li class="nav-item-additional">
+              <button class="header-button header-search-button drop-element-open-button">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.66329 6.18794C1.66329 3.61061 3.75263 1.52128 6.32996 1.52128C8.90729 1.52128 10.9966 3.61061 10.9966 6.18794C10.9966 7.44522 10.4994 8.58636 9.69093 9.42549C9.66808 9.44305 9.64612 9.46229 9.62519 9.48321C9.60427 9.50413 9.58503 9.5261 9.56748 9.54894C8.72835 10.3574 7.58722 10.8546 6.32996 10.8546C3.75263 10.8546 1.66329 8.76527 1.66329 6.18794ZM10.0751 10.8759C9.04862 11.697 7.74662 12.1879 6.32996 12.1879C3.01625 12.1879 0.329956 9.50165 0.329956 6.18794C0.329956 2.87423 3.01625 0.187943 6.32996 0.187943C9.64367 0.187943 12.33 2.87423 12.33 6.18794C12.33 7.60463 11.839 8.90663 11.0179 9.93308L13.468 12.3832C13.7284 12.6436 13.7284 13.0657 13.468 13.326C13.2077 13.5864 12.7855 13.5864 12.5252 13.326L10.0751 10.8759Z" />
+                </svg>
+              </button>
+
+              <div class="drop-element search-window">
+                <input class="field search-input" type="text" placeholder="Поиск по сайту">
+              </div>
+            </li>
+            <li class="nav-item-additional">
+              <button class="header-button drop-element-open-button">
+                <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M8 1.52461C8 1.15642 8.29848 0.857941 8.66667 0.857941H11.3333C11.8638 0.857941 12.3725 1.06865 12.7475 1.44373C13.1226 1.8188 13.3333 2.32751 13.3333 2.85794V12.1913C13.3333 12.7217 13.1226 13.2304 12.7475 13.6055C12.3725 13.9806 11.8638 14.1913 11.3333 14.1913H8.66667C8.29848 14.1913 8 13.8928 8 13.5246C8 13.1564 8.29848 12.8579 8.66667 12.8579H11.3333C11.5101 12.8579 11.6797 12.7877 11.8047 12.6627C11.9298 12.5377 12 12.3681 12 12.1913V2.85794C12 2.68113 11.9298 2.51156 11.8047 2.38654C11.6797 2.26151 11.5101 2.19127 11.3333 2.19127H8.66667C8.29848 2.19127 8 1.8928 8 1.52461ZM4.86189 3.71987C5.12224 3.45952 5.54435 3.45952 5.8047 3.71987L9.1338 7.04897C9.15092 7.06579 9.16714 7.08353 9.18238 7.1021C9.21424 7.1409 9.24106 7.18246 9.26283 7.22589C9.30794 7.31575 9.33333 7.41721 9.33333 7.52461C9.33333 7.63323 9.30735 7.73579 9.26127 7.8264C9.24098 7.86635 9.21641 7.90469 9.18756 7.94072C9.17076 7.96172 9.15271 7.98169 9.13354 8.0005L5.8047 11.3293C5.54435 11.5897 5.12224 11.5897 4.86189 11.3293C4.60154 11.069 4.60154 10.6469 4.86189 10.3865L7.05715 8.19127H0.666667C0.298477 8.19127 0 7.8928 0 7.52461C0 7.15642 0.298477 6.85794 0.666667 6.85794H7.05715L4.86189 4.66268C4.60154 4.40233 4.60154 3.98022 4.86189 3.71987Z" />
+                </svg>
+                Вход
+              </button>
+
+              <div class="drop-element login-window">
+                <h3 class="login-window-title">Личный кабинет</h3>
+                <form class="login-form" action="#">
+                  <input class="field login-form-input" type="email" placeholder="Почта">
+                  <input class="field login-form-input" type="password" placeholder="Пароль">
+
+                  <div class="login-form-buttons">
+                    <button class="button button-additional login-form-button" type="submit">Войти</button>
+                    <div class="login-form-links-container">
+                      <a class="login-form-link" href="#">Забыли пароль?</a>
+                      <a class="login-form-link" href="#">Регистрация</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+
+            </li>
+            <li class="nav-item-additional">
+              <button class="header-button drop-element-open-button">
+                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.16667 0.107941C0.798477 0.107941 0.5 0.406418 0.5 0.774607C0.5 1.1428 0.798477 1.44127 1.16667 1.44127H2.93794L3.40537 3.77666C3.40821 3.79461 3.41176 3.81232 3.416 3.82976L4.38338 8.66309L4.3835 8.66365C4.46706 9.08366 4.69562 9.46093 5.02921 9.72948C5.36111 9.99666 5.77595 10.1393 6.20183 10.1328H11.8225C12.2484 10.1393 12.6633 9.99666 12.9952 9.72948C13.3289 9.46081 13.5575 9.08332 13.641 8.66309L13.641 8.6631L13.642 8.6581L14.5691 3.79666C14.6063 3.60149 14.5545 3.39989 14.4279 3.24681C14.3012 3.09372 14.1129 3.00511 13.9142 3.00511H4.61072L4.1381 0.643769C4.07574 0.332198 3.80215 0.107941 3.4844 0.107941H1.16667ZM5.69098 8.40238L4.87759 4.33844H13.1084L12.3328 8.4053C12.31 8.51782 12.2485 8.61884 12.1591 8.69085C12.0691 8.76329 11.9565 8.80177 11.841 8.79956L11.841 8.79943H11.8282H6.19614V8.79931L6.18337 8.79956C6.06787 8.80177 5.95528 8.76329 5.8653 8.69085C5.77531 8.61842 5.71368 8.51664 5.69117 8.40334L5.69098 8.40238ZM4.55739 12.3634C4.55739 11.6754 5.1151 11.1177 5.80307 11.1177C6.49105 11.1177 7.04876 11.6754 7.04876 12.3634C7.04876 13.0513 6.49105 13.6091 5.80307 13.6091C5.1151 13.6091 4.55739 13.0513 4.55739 12.3634ZM10.9307 12.3634C10.9307 11.6754 11.4884 11.1177 12.1764 11.1177C12.8644 11.1177 13.4221 11.6754 13.4221 12.3634C13.4221 13.0513 12.8644 13.6091 12.1764 13.6091C11.4884 13.6091 10.9307 13.0513 10.9307 12.3634Z" />
+                </svg>
+                <span class="cart-items-quantity">2</span> &nbsp;товара
+              </button>
+
+              <div class="drop-element cart-window">
+                <h3 class="cart-window-title">Корзина</h3>
+                <ul class="cart-list">
+                  <li class="cart-item">
+                    <img class="cart-item-image" src="images/ice-cream-raspberry.jpg" alt="Изображение товара.">
+                    <div class="cart-item-information">
+                      <h4 class="cart-item-title ">Малинка</h4>
+                      <p class="cart-item-quantity"><span class="ice-cream-weight">1</span>&nbsp;кг х <span
+                          class="price-for-kg">310</span>&nbsp;₽</p>
+                    </div>
+                    <span class="cart-item-price ">310 ₽</span>
+                    <button class="delete-from-cart" type="button"></button>
+                  </li>
+                  <li class="cart-item">
+                    <img class="cart-item-image" src="images/ice-cream-bubble-gum.jpg" alt="Изображение товара.">
+                    <div class="cart-item-information">
+                      <h4 class="cart-item-title ">Бабл-гам</h4>
+                      <p class="cart-item-quantity"><span class="ice-cream-weight">1</span>&nbsp;кг х <span
+                          class="price-for-kg">310</span>&nbsp;₽</p>
+                    </div>
+                    <span class="cart-item-price ">310 ₽</span>
+                    <button class="delete-from-cart" type="button"></button>
+                  </li>
+                </ul>
+                <div class="cart-window-bottom">
+                  <button class="button button-additional order-button" type="button">Оформить заказ</button>
+                  <span class="cart-total">Итого: <span class="cart-total-price">790</span>&nbsp;₽</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <button class="burger" type="button"></button>
+      </header>
+      <!-- / HEADER -->
+
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-left">
+          <div class="hero-text hero-text-1 active">
+            <h3 class="section-title hero-title">Нежный пломбир <br> с клубничным джемом</h3>
+            <p class="hero-description">Натуральное мороженое из свежих сливок
+              и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
+          </div>
+          <div class="hero-text hero-text-2">
+            <h3 class="section-title hero-title">Сливочное мороженое со вкусом банана</h3>
+            <p class="hero-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение
+              даже в самый жаркий летний день. </p>
+          </div>
+          <div class="hero-text hero-text-3">
+            <h3 class="section-title hero-title">Карамельный пломбир
+              с маршмеллоу</h3>
+            <p class="hero-description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира завоюет
+              сердца сладкоежек всех возрастов.</p>
+          </div>
+          <button class="button">Заказать</button>
+        </div>
+        <div class="hero-right">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide slide-1">
+                <div class="slide-content">
+                  <img class="slide-image" src="images/ice-cream-1.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide slide-2">
+                <div class="slide-content">
+                  <img class="slide-image" src="images/ice-cream-2.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-slide slide-3">
+                <div class="slide-content">
+                  <img class="slide-image" src="images/ice-cream-3.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-buttons">
+            <button class="swiper-button swiper-button-prev" type="button">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.86474 13.1352C9.12443 13.3949 9.54549 13.3949 9.80519 13.1352C10.0649 12.8755 10.0649 12.4545 9.80519 12.1948L5.60391 7.99351L9.80523 3.79219C10.0649 3.53249 10.0649 3.11144 9.80522 2.85174C9.54553 2.59204 9.12447 2.59204 8.86477 2.85174L4.19606 7.52045C4.19511 7.52139 4.19417 7.52233 4.19322 7.52328C3.93352 7.78298 3.93352 8.20403 4.19322 8.46373L8.86474 13.1352Z" />
+              </svg>
+            </button>
+            <button class="swiper-button swiper-button-next" type="button">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M8.86474 13.1352C9.12443 13.3949 9.54549 13.3949 9.80519 13.1352C10.0649 12.8755 10.0649 12.4545 9.80519 12.1948L5.60391 7.99351L9.80523 3.79219C10.0649 3.53249 10.0649 3.11144 9.80522 2.85174C9.54553 2.59204 9.12447 2.59204 8.86477 2.85174L4.19606 7.52045C4.19511 7.52139 4.19417 7.52233 4.19322 7.52328C3.93352 7.78298 3.93352 8.20403 4.19322 8.46373L8.86474 13.1352Z" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- / HERO -->
+
+
+      <!-- GIFTS -->
+      <section class="gifts">
+        <h2 class="section-title gifts-title">Заказывайте мороженое и получайте подарки!</h2>
+        <div class="gifts-columns">
+          <div class="gifts-col">
+            <h3 class="gifts-col-title">Малинка даром!</h3>
+            <p class="gifts-col-descr">При покупке 2 кг любого фруктового мороженого добавим в ваш заказ банку
+              малинового варенья бесплатно.</p>
+            <button class="button" type="button">Хочу подарок</button>
+          </div>
+          <div class="gifts-col">
+            <h3 class="gifts-col-title">Маршмеллоу даром!</h3>
+            <p class="gifts-col-descr">При покупке 2 кг пломбира добавим в ваш заказ упаковку нежных зефирок совершенно
+              бесплатно.</p>
+            <button class="button" type="button">Хочу подарок</button>
+          </div>
+        </div>
+      </section>
+      <!-- / GIFTS -->
+
+
+      <!-- POPULAR -->
+      <section class="popular">
+        <h2 class="section-title popular-title">Попробуйте самые популярные вкусы нашего мороженого</h2>
+        <ul class="popular-list">
+          <li class="popular-item">
+            <img class="popular-item-image" src="images/popular-1.png" width="168" height="168">
+            <h3 class="popular-item-title">Малинка</h3>
+            <p class="popular-item-descr">Сливочное мороженое с малиновым джемом</p>
+            <div class="popular-item-bottom">
+              <span class="popular-item-price">310 ₽/кг</span>
+              <button class="add-to-cart">
+                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.16667 0.25C0.798477 0.25 0.5 0.548477 0.5 0.916667C0.5 1.28486 0.798477 1.58333 1.16667 1.58333H2.93794L3.40537 3.91872C3.40821 3.93667 3.41176 3.95438 3.416 3.97182L4.38338 8.80515L4.3835 8.80571C4.46706 9.22572 4.69562 9.60299 5.02921 9.87153C5.36111 10.1387 5.77595 10.2813 6.20183 10.2748H11.8225C12.2484 10.2813 12.6633 10.1387 12.9952 9.87153C13.3289 9.60287 13.5575 9.22538 13.641 8.80515L13.641 8.80515L13.642 8.80016L14.5691 3.93872C14.6063 3.74355 14.5545 3.54195 14.4279 3.38887C14.3012 3.23578 14.1129 3.14716 13.9142 3.14716H4.61072L4.1381 0.785829C4.07574 0.474257 3.80215 0.25 3.4844 0.25H1.16667ZM5.69098 8.54444L4.87759 4.4805H13.1084L12.3328 8.54736C12.31 8.65988 12.2485 8.7609 12.1591 8.83291C12.0691 8.90535 11.9565 8.94383 11.841 8.94162L11.841 8.94149H11.8282H6.19614V8.94137L6.18337 8.94162C6.06787 8.94383 5.95528 8.90535 5.8653 8.83291C5.77531 8.76048 5.71368 8.6587 5.69117 8.5454L5.69098 8.54444ZM4.55739 12.5054C4.55739 11.8175 5.1151 11.2597 5.80307 11.2597C6.49105 11.2597 7.04876 11.8175 7.04876 12.5054C7.04876 13.1934 6.49105 13.7511 5.80307 13.7511C5.1151 13.7511 4.55739 13.1934 4.55739 12.5054ZM10.9307 12.5054C10.9307 11.8175 11.4884 11.2597 12.1764 11.2597C12.8644 11.2597 13.4221 11.8175 13.4221 12.5054C13.4221 13.1934 12.8644 13.7511 12.1764 13.7511C11.4884 13.7511 10.9307 13.1934 10.9307 12.5054Z" />
+                </svg>
+              </button>
+            </div>
+          </li>
+          <li class="popular-item">
+            <img class="popular-item-image" src="images/popular-2.png" width="168" height="168">
+            <h3 class="popular-item-title">Фисташка</h3>
+            <p class="popular-item-descr">Фисташковый пломбир с кусочками шоколада</p>
+            <div class="popular-item-bottom">
+              <span class="popular-item-price">340 ₽/кг</span>
+              <button class="add-to-cart">
+                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.16667 0.25C0.798477 0.25 0.5 0.548477 0.5 0.916667C0.5 1.28486 0.798477 1.58333 1.16667 1.58333H2.93794L3.40537 3.91872C3.40821 3.93667 3.41176 3.95438 3.416 3.97182L4.38338 8.80515L4.3835 8.80571C4.46706 9.22572 4.69562 9.60299 5.02921 9.87153C5.36111 10.1387 5.77595 10.2813 6.20183 10.2748H11.8225C12.2484 10.2813 12.6633 10.1387 12.9952 9.87153C13.3289 9.60287 13.5575 9.22538 13.641 8.80515L13.641 8.80515L13.642 8.80016L14.5691 3.93872C14.6063 3.74355 14.5545 3.54195 14.4279 3.38887C14.3012 3.23578 14.1129 3.14716 13.9142 3.14716H4.61072L4.1381 0.785829C4.07574 0.474257 3.80215 0.25 3.4844 0.25H1.16667ZM5.69098 8.54444L4.87759 4.4805H13.1084L12.3328 8.54736C12.31 8.65988 12.2485 8.7609 12.1591 8.83291C12.0691 8.90535 11.9565 8.94383 11.841 8.94162L11.841 8.94149H11.8282H6.19614V8.94137L6.18337 8.94162C6.06787 8.94383 5.95528 8.90535 5.8653 8.83291C5.77531 8.76048 5.71368 8.6587 5.69117 8.5454L5.69098 8.54444ZM4.55739 12.5054C4.55739 11.8175 5.1151 11.2597 5.80307 11.2597C6.49105 11.2597 7.04876 11.8175 7.04876 12.5054C7.04876 13.1934 6.49105 13.7511 5.80307 13.7511C5.1151 13.7511 4.55739 13.1934 4.55739 12.5054ZM10.9307 12.5054C10.9307 11.8175 11.4884 11.2597 12.1764 11.2597C12.8644 11.2597 13.4221 11.8175 13.4221 12.5054C13.4221 13.1934 12.8644 13.7511 12.1764 13.7511C11.4884 13.7511 10.9307 13.1934 10.9307 12.5054Z" />
+                </svg>
+              </button>
+            </div>
+          </li>
+          <li class="popular-item">
+            <img class="popular-item-image" src="images/popular-3.png" width="168" height="168">
+            <h3 class="popular-item-title">Черника</h3>
+            <p class="popular-item-descr">Крем-брюле
+              с черничным джемом</p>
+            <div class="popular-item-bottom">
+              <span class="popular-item-price">330 ₽/кг</span>
+              <button class="add-to-cart">
+                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.16667 0.25C0.798477 0.25 0.5 0.548477 0.5 0.916667C0.5 1.28486 0.798477 1.58333 1.16667 1.58333H2.93794L3.40537 3.91872C3.40821 3.93667 3.41176 3.95438 3.416 3.97182L4.38338 8.80515L4.3835 8.80571C4.46706 9.22572 4.69562 9.60299 5.02921 9.87153C5.36111 10.1387 5.77595 10.2813 6.20183 10.2748H11.8225C12.2484 10.2813 12.6633 10.1387 12.9952 9.87153C13.3289 9.60287 13.5575 9.22538 13.641 8.80515L13.641 8.80515L13.642 8.80016L14.5691 3.93872C14.6063 3.74355 14.5545 3.54195 14.4279 3.38887C14.3012 3.23578 14.1129 3.14716 13.9142 3.14716H4.61072L4.1381 0.785829C4.07574 0.474257 3.80215 0.25 3.4844 0.25H1.16667ZM5.69098 8.54444L4.87759 4.4805H13.1084L12.3328 8.54736C12.31 8.65988 12.2485 8.7609 12.1591 8.83291C12.0691 8.90535 11.9565 8.94383 11.841 8.94162L11.841 8.94149H11.8282H6.19614V8.94137L6.18337 8.94162C6.06787 8.94383 5.95528 8.90535 5.8653 8.83291C5.77531 8.76048 5.71368 8.6587 5.69117 8.5454L5.69098 8.54444ZM4.55739 12.5054C4.55739 11.8175 5.1151 11.2597 5.80307 11.2597C6.49105 11.2597 7.04876 11.8175 7.04876 12.5054C7.04876 13.1934 6.49105 13.7511 5.80307 13.7511C5.1151 13.7511 4.55739 13.1934 4.55739 12.5054ZM10.9307 12.5054C10.9307 11.8175 11.4884 11.2597 12.1764 11.2597C12.8644 11.2597 13.4221 11.8175 13.4221 12.5054C13.4221 13.1934 12.8644 13.7511 12.1764 13.7511C11.4884 13.7511 10.9307 13.1934 10.9307 12.5054Z" />
+                </svg>
+              </button>
+            </div>
+          </li>
+          <li class="popular-item">
+            <img class="popular-item-image" src="images/popular-4.png" width="168" height="168">
+            <h3 class="popular-item-title">Бабл-гам</h3>
+            <p class="popular-item-descr">Ванильный пломбир
+              со сладкой посыпкой</p>
+            <div class="popular-item-bottom">
+              <span class="popular-item-price">320 ₽/кг</span>
+              <button class="add-to-cart">
+                <svg width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.16667 0.25C0.798477 0.25 0.5 0.548477 0.5 0.916667C0.5 1.28486 0.798477 1.58333 1.16667 1.58333H2.93794L3.40537 3.91872C3.40821 3.93667 3.41176 3.95438 3.416 3.97182L4.38338 8.80515L4.3835 8.80571C4.46706 9.22572 4.69562 9.60299 5.02921 9.87153C5.36111 10.1387 5.77595 10.2813 6.20183 10.2748H11.8225C12.2484 10.2813 12.6633 10.1387 12.9952 9.87153C13.3289 9.60287 13.5575 9.22538 13.641 8.80515L13.641 8.80515L13.642 8.80016L14.5691 3.93872C14.6063 3.74355 14.5545 3.54195 14.4279 3.38887C14.3012 3.23578 14.1129 3.14716 13.9142 3.14716H4.61072L4.1381 0.785829C4.07574 0.474257 3.80215 0.25 3.4844 0.25H1.16667ZM5.69098 8.54444L4.87759 4.4805H13.1084L12.3328 8.54736C12.31 8.65988 12.2485 8.7609 12.1591 8.83291C12.0691 8.90535 11.9565 8.94383 11.841 8.94162L11.841 8.94149H11.8282H6.19614V8.94137L6.18337 8.94162C6.06787 8.94383 5.95528 8.90535 5.8653 8.83291C5.77531 8.76048 5.71368 8.6587 5.69117 8.5454L5.69098 8.54444ZM4.55739 12.5054C4.55739 11.8175 5.1151 11.2597 5.80307 11.2597C6.49105 11.2597 7.04876 11.8175 7.04876 12.5054C7.04876 13.1934 6.49105 13.7511 5.80307 13.7511C5.1151 13.7511 4.55739 13.1934 4.55739 12.5054ZM10.9307 12.5054C10.9307 11.8175 11.4884 11.2597 12.1764 11.2597C12.8644 11.2597 13.4221 11.8175 13.4221 12.5054C13.4221 13.1934 12.8644 13.7511 12.1764 13.7511C11.4884 13.7511 10.9307 13.1934 10.9307 12.5054Z" />
+                </svg>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- / POPULAR -->
+
+
+      <!-- ADVANTAGES -->
+      <section class="advantages">
+        <div class="advantages-content">
+          <h2 class="section-title advantages-title">Магазин Глейси – это онлайн и офлайн-магазин по продаже мороженого
+            собственного производства на развес</h2>
+          <ul class="advantages-list">
+            <li class="advantages-item">
+              <div class="advantages-icon"></div>
+              <p class="advantages-text">Всё наше мороженое изготавливается на собственном производстве с использованием
+                современного оборудования и проверенных временем технологий.</p>
+            </li>
+            <li class="advantages-item">
+              <div class="advantages-icon"></div>
+              <p class="advantages-text">Закупка ингредиентов производится только
+                у проверенных фермерских хозяйств, с которыми
+                нас связывает долговременное сотрудничество.</p>
+            </li>
+            <li class="advantages-item">
+              <div class="advantages-icon"></div>
+              <p class="advantages-text">Для приготовления мороженого используются сливки и молоко высочайшего качества.
+                Все ингредиенты
+                и добавки произведены из натурального сырья.</p>
+            </li>
+            <li class="advantages-item">
+              <div class="advantages-icon"></div>
+              <p class="advantages-text">Доставка нашего мороженого осуществляется в специальном термопаке, который не
+                даёт мороженому растаять и позволяет сохранить превосходный вкус.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- / ADVANTAGES -->
+
+
+      <!-- NEWSLETTER -->
+      <section class="newsletter">
+        <div class="newsletter-blog">
+          <p class="newsletter-blog-category">Новое в нашем блоге</p>
+          <h3 class="newsletter-blog-title">10 способов сервировки фруктовых щербетов
+            к столу</h3>
+          <div class="newsletter-blog-overlay">
+            <a class="button" href="#">Перейти</a>
+          </div>
+        </div>
+        <form class="newsletter-form" action="#">
+          <div class="newsletter-form-wrapper">
+            <p class="newsletter-form-text">Подпишитесь на нашу сладкую рассылку и будьте всегда
+              в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды.
+              Честно =)</p>
+            <div class="newsletter-form-bottom">
+              <input class="field newsletter-form-input" type="email" placeholder="email@example.com">
+              <button class="button button-additional" type="submit">Отправить</button>
+            </div>
+          </div>
+        </form>
+      </section>
+      <!-- / NEWSLETTER -->
+
+
+      <!-- DELIVERY -->
+      <section class="delivery">
+        <div class="delivery-col">
+          <h2 class="section-title delivery-title">Доставка любимого мороженого на дом</h2>
+          <p class="delivery-description">Хочется полакомиться любимым десертом, но нет времени съездить в магазин?
+            Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!</p>
+        </div>
+        <div class="delivery-col">
+          <form action="#" class="delivery-form">
+            <p class="delivery-form-text">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.
+            </p>
+            <div class="delivery-form-fields">
+              <div class="delivery-form-field">
+                <label class="delivery-form-label" for="date">
+                  Дата
+                  <div class="tooltip">
+                    <p class="tooltip-text">Укажите дату доставки</p>
+                  </div>
+                </label>
+                <input class="field delivery-form-input" type="text" id="date" placeholder="01.10.2022">
+              </div>
+              <div class="delivery-form-field">
+                <label class="delivery-form-label" for="phone">Телефон</label>
+                <input class="field delivery-form-input" type="text" id="phone" placeholder="+7 800 999-00-00">
+              </div>
+              <div class="delivery-form-field address-field">
+                <label class="delivery-form-label" for="address">
+                  Адрес
+                  <div class="tooltip">
+                    <p class="tooltip-text">Введите название улицы, дома и квартиры</p>
+                  </div>
+                </label>
+                <input class="field delivery-form-input" type="text" id="address"
+                  placeholder="ул. Малая Спасская, 19/8">
+              </div>
+            </div>
+            <button class="button button-additional delivery-form-button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+      <!-- / DELIVERY -->
+
+
+      <!-- CONTACT US-->
+      <section class="contact-us">
+        <div class="contact-us-wrapper">
+          <p class="address-label">Адрес главного офиса и офлайн-магазина:</p>
+          <p class="contact-us-address">наб. реки Карповки, <br> 5 лит П, Санкт-Петербург</p>
+          <p class="phone-label">Для заказов по телефону:</p>
+          <p class="contact-us-phone">+7 (812) 812-12-12</p>
+          <p class="contact-us-under-phone">(с 10 до 20 ежедневно)</p>
+          <button class="button button-additional contact-us-button">Форма обратной связи</button>
+        </div>
+      </section>
+      <!-- / CONTACT US -->
+
+
+      <!-- FOOTER -->
+      <footer class="footer">
+        <ul class="social-list">
+          <li class="social-item">
+            <a class="social-link" href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M24 12C24 18.627 18.627 24 12 24C5.373 24 0 18.627 0 12C0 5.373 5.373 0 12 0C18.627 0 24 5.373 24 12ZM12.43 8.859C11.263 9.344 8.93 10.349 5.432 11.873C4.864 12.099 4.566 12.32 4.539 12.536C4.493 12.902 4.951 13.046 5.573 13.241C5.658 13.268 5.746 13.295 5.836 13.325C6.449 13.524 7.273 13.757 7.701 13.766C8.09 13.774 8.524 13.614 9.003 13.286C12.271 11.079 13.958 9.964 14.064 9.94C14.139 9.923 14.243 9.901 14.313 9.964C14.383 10.026 14.376 10.144 14.369 10.176C14.323 10.369 12.529 12.038 11.599 12.902C11.309 13.171 11.104 13.362 11.062 13.406C10.968 13.503 10.872 13.596 10.78 13.685C10.21 14.233 9.784 14.645 10.804 15.317C11.294 15.64 11.686 15.907 12.077 16.173C12.504 16.464 12.93 16.754 13.482 17.116C13.622 17.208 13.756 17.303 13.887 17.396C14.384 17.751 14.831 18.069 15.383 18.019C15.703 17.989 16.035 17.688 16.203 16.789C16.6 14.663 17.382 10.059 17.563 8.161C17.574 8.00341 17.5673 7.84509 17.543 7.689C17.5285 7.56293 17.4671 7.44693 17.371 7.364C17.228 7.247 17.006 7.222 16.906 7.224C16.455 7.232 15.763 7.473 12.43 8.859Z"
+                  fill="#FCFCFC" />
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12ZM12.5884 14.9749H11.8711C11.8711 14.9749 10.2885 15.0584 8.89479 13.7867C7.37486 12.3995 6.03249 9.64702 6.03249 9.64702C6.03249 9.64702 5.95511 9.46654 6.03917 9.3793C6.13366 9.28121 6.39106 9.27493 6.39106 9.27493L8.10567 9.26508C8.10567 9.26508 8.26727 9.28878 8.38294 9.36317C8.47824 9.42457 8.53167 9.53936 8.53167 9.53936C8.53167 9.53936 8.80878 10.1536 9.17581 10.7093C9.89212 11.7942 10.2258 12.0315 10.469 11.9152C10.8233 11.7458 10.7171 10.3816 10.7171 10.3816C10.7171 10.3816 10.7236 9.88646 10.5387 9.66601C10.3955 9.4951 10.1254 9.44527 10.0062 9.43128C9.90971 9.42 10.0681 9.22367 10.2733 9.13558C10.5819 9.00308 11.1268 8.99551 11.7706 9.00136C12.2722 9.00579 12.4165 9.0332 12.6127 9.07475C13.0677 9.17105 13.0536 9.47963 13.0229 10.1454C13.0138 10.3444 13.0032 10.5752 13.0032 10.8418C13.0032 10.9018 13.0012 10.9657 12.9991 11.0315C12.9885 11.3725 12.9763 11.7629 13.2324 11.908C13.3637 11.9822 13.6849 11.9191 14.4884 10.7233C14.8693 10.1566 15.1549 9.49024 15.1549 9.49024C15.1549 9.49024 15.2173 9.37145 15.3142 9.32048C15.4134 9.26851 15.5472 9.2845 15.5472 9.2845L17.3515 9.27465C17.3515 9.27465 17.8937 9.21796 17.9815 9.43242C18.0735 9.65758 17.7788 10.1833 17.0417 11.0444C16.3463 11.8567 16.006 12.1587 16.0328 12.4236C16.0527 12.6198 16.2739 12.7957 16.7015 13.1436C17.5897 13.8661 17.8264 14.2455 17.8827 14.3357C17.8872 14.343 17.8906 14.3484 17.893 14.3519C18.2905 14.9296 17.4522 14.9749 17.4522 14.9749L15.8497 14.9944C15.8497 14.9944 15.5053 15.0543 15.0521 14.7814C14.8151 14.6388 14.5833 14.406 14.3626 14.1842C14.0251 13.8451 13.7131 13.5316 13.4469 13.6056C13.0002 13.7298 13.0143 14.5734 13.0143 14.5734C13.0143 14.5734 13.0175 14.7536 12.9157 14.8495C12.8051 14.954 12.5884 14.9749 12.5884 14.9749Z"
+                  fill="#FCFCFC" />
+              </svg>
+            </a>
+          </li>
+          <li class="social-item">
+            <a class="social-link" href="#">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.0037 11.7913L11.1963 10.4813C10.9513 10.3675 10.75 10.495 10.75 10.7662V13.2338C10.75 13.505 10.9513 13.6325 11.1963 13.5188L14.0025 12.2087C14.2488 12.0938 14.2487 11.9063 14.0037 11.7913ZM12 0C5.3725 0 0 5.3725 0 12C0 18.6275 5.3725 24 12 24C18.6275 24 24 18.6275 24 12C24 5.3725 18.6275 0 12 0ZM12 16.875C5.8575 16.875 5.75 16.3213 5.75 12C5.75 7.67875 5.8575 7.125 12 7.125C18.1425 7.125 18.25 7.67875 18.25 12C18.25 16.3213 18.1425 16.875 12 16.875Z"
+                  fill="#FCFCFC" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <ul class="about-us-list">
+          <li class="about-us-item">
+            <a class="about-us-link about-us-for-suppliers" href="#">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.8909 1.99447C12.5504 1.65381 12.1461 1.38357 11.7011 1.19919C11.2562 1.01482 10.7792 0.919922 10.2976 0.919922C9.8159 0.919922 9.33896 1.01482 8.89399 1.19919C8.44901 1.38357 8.04473 1.65381 7.70422 1.99447L6.99756 2.70114L6.29089 1.99447C5.6031 1.30668 4.67025 0.920278 3.69756 0.920278C2.72487 0.920278 1.79202 1.30668 1.10422 1.99447C0.416428 2.68227 0.0300293 3.61512 0.0300293 4.58781C0.0300293 5.56049 0.416428 6.49334 1.10422 7.18114L1.81089 7.88781L6.99756 13.0745L12.1842 7.88781L12.8909 7.18114C13.2316 6.84064 13.5018 6.43635 13.6862 5.99138C13.8705 5.5464 13.9654 5.06946 13.9654 4.58781C13.9654 4.10615 13.8705 3.62921 13.6862 3.18424C13.5018 2.73926 13.2316 2.33498 12.8909 1.99447Z"
+                  fill="#2D3440" />
+              </svg>
+              Для поставщиков
+            </a>
+          </li>
+          <li class="about-us-item">
+            <a class="about-us-link" href="#">Наши документы</a>
+          </li>
+          <li class="about-us-item">
+            <a class="about-us-link" href="#">О производстве</a>
+          </li>
+          <li class="about-us-item">
+            <a class="about-us-link" href="#">Экологические стандарты</a>
+          </li>
+        </ul>
+        <img src="images/logo_htmlacademy.svg" alt="HTMLAcademy logo." width="93" height="27">
+      </footer>
+      <!-- / FOOTER -->
+
+    </div>
+
+    <div class="modal modal-window">
+      <form class="modal-form" action="#">
+        <button class="modal-close" type="button"></button>
+        <h2 class="modal-form-title">Мы обязательно ответим вам!</h2>
+        <input class="field modal-form-input" type="text" placeholder="Имя и фамилия" name="Name">
+        <input class="field modal-form-input" type="email" placeholder="email@example.com" name="email">
+        <textarea name="message" placeholder="В свободной форме"></textarea>
+        <button class="button button-additional modal-form-button" type="submit">Отправить</button>
+      </form>
+    </div>
+
+  </body>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="swiper.js"></script>
+
+</html>
