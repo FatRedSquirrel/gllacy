@@ -1,6 +1,3 @@
-
-
-
 // header menu links
 let menuOpenButtons = document.getElementsByClassName('drop-element-open-button');
 
@@ -19,22 +16,8 @@ for (let i = 0; i < menuOpenButtons.length; i++) {
   });
 }
 
-// modal
-let modal = document.querySelector('.modal'),
-  modalOpen = document.querySelector('.contact-us-button');
-modalClose = document.querySelector('.modal-close');
-
-modalOpen.onclick = function () {
-  modal.classList.add('open');
-}
-
-modalClose.onclick = function (event) {
-  modal.classList.remove('open');
-}
-
-
 // mobile menu
-const burger = document.querySelector('.burger'),
+let burger = document.querySelector('.burger'),
   mobileMenu = document.querySelector('.nav-mobile'),
   menuOverlay = document.querySelector('.nav-mobile-overlay'),
   loginOpen = document.querySelector('.nav-mobile-login'),
@@ -84,13 +67,27 @@ let menuBackButton = document.querySelector('.mobile-menu-back'),
   submenu = document.querySelector('.submenu'),
   submenuOpenButton = document.querySelector('.submenu-open');
 
-submenuOpenButton.onclick = function() {
+submenuOpenButton.onclick = function () {
   mobileMenuList.classList.add('glide');
   submenu.classList.add('open');
 }
 
-menuBackButton.onclick = function() {
+menuBackButton.onclick = function () {
   mobileMenuList.classList.remove('glide');
   submenu.classList.remove('open');
   console.log('clicked');
+}
+
+
+// modal
+let modal = document.querySelector('.modal'),
+  modalOpen = document.querySelector('.contact-us-button');
+modalClose = document.querySelector('.modal-close');
+
+modalOpen.onclick = function () {
+  modal.classList.add('open');
+}
+
+modalClose.onclick = function (event) {
+  modal.classList.remove('open');
 }
