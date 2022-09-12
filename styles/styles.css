@@ -54,12 +54,12 @@ input[type=number] {
 
   .button:hover {
     background-color: rgba(252, 252, 252, 0.4);
-    outline: 4px solid #FCFCFC;
+    border: 4px solid #FCFCFC;
   }
 
   .button-additional:hover {
     background-color: #fcfcfc;
-    outline: 4px solid #FF2F64;
+    border: 4px solid #FF2F64;
     color: #2D3440;
   }
 
@@ -157,10 +157,6 @@ body {
   position: relative;
 }
 
-button {
-  -webkit-appearance: none;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -234,7 +230,7 @@ button {
 .button {
   padding: 12px 32px;
   background-color: #FCFCFC;
-  outline: 4px solid #ffdddd;
+  border: 4px solid #ffdddd;
   box-shadow: 0 4px 12px rgba(45, 52, 64, 0.1);
   border-radius: 26px;
   color: #2D3440;
@@ -255,7 +251,7 @@ button {
 .button-additional {
   background-color: #FF2F64;
   color: #FCFCFC;
-  outline: 4px solid #fea1b8;
+  border: 4px solid #fea1b8;
 }
 
 .button-additional:focus {
